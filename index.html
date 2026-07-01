@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0d0b0a" />
+  <title>Alessandro &amp; Valentina — An Invitation</title>
+  <meta name="description" content="With great joy, we invite you to celebrate the wedding of Alessandro & Valentina." />
+
+  <!-- Social share -->
+  <meta property="og:title" content="Alessandro & Valentina — Wedding Invitation" />
+  <meta property="og:description" content="You are warmly invited to celebrate our love." />
+  <meta property="og:type" content="website" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230d0b0a'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='16' fill='%23c9a24b' text-anchor='middle'%3EAV%3C/text%3E%3C/svg%3E" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="is-locked">
+
+  <!-- ============ AMBIENT AUDIO ============ -->
+  <audio id="ambient" loop preload="none">
+    <!-- Royalty-free ambient track; replace src with your own -->
+    <source src="https://cdn.pixabay.com/audio/2022/03/15/audio_c8e9e9a1a2.mp3" type="audio/mpeg" />
+  </audio>
+  <button id="audioToggle" class="audio-toggle" aria-label="Toggle music" title="Play / pause music">
+    <span class="audio-bars"><i></i><i></i><i></i><i></i></span>
+  </button>
+
+  <!-- ============ COVER / ENVELOPE ============ -->
+  <section id="cover" class="cover">
+    <div class="cover__vignette"></div>
+    <div class="envelope" id="envelope">
+      <div class="envelope__flap"></div>
+      <div class="envelope__body">
+        <div class="envelope__front"></div>
+        <div class="envelope__card">
+          <p class="envelope__eyebrow">Together with their families</p>
+          <h1 class="envelope__names">Alessandro <span>&amp;</span> Valentina</h1>
+          <p class="envelope__sub">request the honour of your presence</p>
+        </div>
+        <div class="wax-seal" id="waxSeal">
+          <span class="wax-seal__mono">A&nbsp;V</span>
+        </div>
+      </div>
+      <p class="envelope__hint" id="openHint">Tap the seal to open</p>
+    </div>
+  </section>
+
+  <!-- ============ MAIN INVITATION ============ -->
+  <main id="invite" class="invite" aria-hidden="true">
+
+    <canvas id="petals" class="petals" aria-hidden="true"></canvas>
+
+    <!-- HERO -->
+    <header class="hero" id="home">
+      <div class="hero__frame">
+        <p class="hero__eyebrow reveal">The Wedding of</p>
+        <h1 class="hero__names">
+          <span class="reveal" style="--d:.1s">Alessandro</span>
+          <span class="hero__amp reveal" style="--d:.25s">&amp;</span>
+          <span class="reveal" style="--d:.4s">Valentina</span>
+        </h1>
+        <div class="hero__rule reveal" style="--d:.55s"><span></span>✦<span></span></div>
+        <p class="hero__date reveal" style="--d:.7s">Saturday, the Twelfth of September · Two Thousand Twenty-Six</p>
+        <p class="hero__place reveal" style="--d:.8s">Villa del Balbianello · Lake Como, Italy</p>
+      </div>
+      <a href="#story" class="hero__scroll" aria-label="Scroll down"><span></span></a>
+    </header>
+
+    <!-- COUNTDOWN -->
+    <section class="countdown" id="countdown">
+      <p class="section__eyebrow">Counting down to forever</p>
+      <div class="countdown__grid" id="cdGrid">
+        <div class="cd"><span class="cd__num" data-unit="days">00</span><span class="cd__label">Days</span></div>
+        <div class="cd"><span class="cd__num" data-unit="hours">00</span><span class="cd__label">Hours</span></div>
+        <div class="cd"><span class="cd__num" data-unit="mins">00</span><span class="cd__label">Minutes</span></div>
+        <div class="cd"><span class="cd__num" data-unit="secs">00</span><span class="cd__label">Seconds</span></div>
+      </div>
+    </section>
+
+    <!-- STORY -->
+    <section class="story" id="story">
+      <p class="section__eyebrow">Our Story</p>
+      <h2 class="section__title">How Two Became One</h2>
+      <div class="timeline">
+        <article class="tl">
+          <div class="tl__year">2016</div>
+          <div class="tl__body">
+            <h3>The First Glance</h3>
+            <p>A crowded gallery opening in Florence, a shared silence before a Botticelli, and a conversation that lasted until the lights went out.</p>
+          </div>
+        </article>
+        <article class="tl">
+          <div class="tl__year">2019</div>
+          <div class="tl__body">
+            <h3>The Adventure</h3>
+            <p>Three years, eleven countries, and countless midnight trains later — we learned that home was never a place, but a person.</p>
+          </div>
+        </article>
+        <article class="tl">
+          <div class="tl__year">2024</div>
+          <div class="tl__body">
+            <h3>The Proposal</h3>
+            <p>On a terrace above the Amalfi coast, beneath a sky full of quiet stars, a question was asked. The answer was always going to be yes.</p>
+          </div>
+        </article>
+        <article class="tl">
+          <div class="tl__year">2026</div>
+          <div class="tl__body">
+            <h3>Forever Begins</h3>
+            <p>And now, surrounded by everyone we love, we begin the greatest chapter of all.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- DETAILS -->
+    <section class="details" id="details">
+      <p class="section__eyebrow">The Celebration</p>
+      <h2 class="section__title">Details of the Day</h2>
+      <div class="details__grid">
+        <div class="card">
+          <div class="card__icon">⛪</div>
+          <h3>The Ceremony</h3>
+          <p class="card__time">4:00 in the afternoon</p>
+          <p>Villa del Balbianello<br />Via Guido Monzino 1, Lenno</p>
+          <p class="card__note">Cocktails to follow on the loggia</p>
+        </div>
+        <div class="card">
+          <div class="card__icon">🥂</div>
+          <h3>The Reception</h3>
+          <p class="card__time">7:00 in the evening</p>
+          <p>The Grand Terrace<br />Overlooking Lake Como</p>
+          <p class="card__note">Dinner, dancing &amp; fireworks at midnight</p>
+        </div>
+        <div class="card">
+          <div class="card__icon">👗</div>
+          <h3>Dress Code</h3>
+          <p class="card__time">Black Tie · Formal</p>
+          <p>A palette of midnight, ivory &amp; gold is warmly encouraged.</p>
+          <p class="card__note">Heels are best left for the terrace, not the garden</p>
+        </div>
+      </div>
+      <div class="details__cta">
+        <a class="btn btn--ghost" href="https://maps.google.com/?q=Villa+del+Balbianello" target="_blank" rel="noopener">View Location</a>
+        <a class="btn btn--ghost" id="calBtn" href="#">Add to Calendar</a>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="gallery" id="gallery">
+      <p class="section__eyebrow">Moments</p>
+      <h2 class="section__title">A Glimpse of Us</h2>
+      <div class="gallery__grid" id="galleryGrid"></div>
+    </section>
+
+    <!-- RSVP -->
+    <section class="rsvp" id="rsvp">
+      <p class="section__eyebrow">Will you join us?</p>
+      <h2 class="section__title">Kindly Respond</h2>
+      <p class="rsvp__lead">We would be honoured to share this day with you. Please reply by the First of August, 2026.</p>
+      <form class="rsvp__form" id="rsvpForm" novalidate>
+        <div class="field">
+          <input type="text" id="guestName" name="name" required placeholder=" " />
+          <label for="guestName">Full Name</label>
+        </div>
+        <div class="field">
+          <input type="email" id="guestEmail" name="email" required placeholder=" " />
+          <label for="guestEmail">Email Address</label>
+        </div>
+        <div class="field field--row">
+          <div class="field__seg" data-group="attend">
+            <span class="field__legend">Will you attend?</span>
+            <div class="seg">
+              <button type="button" class="seg__opt is-active" data-value="yes">Joyfully Accept</button>
+              <button type="button" class="seg__opt" data-value="no">Regretfully Decline</button>
+            </div>
+          </div>
+        </div>
+        <div class="field field--select">
+          <label for="guests" class="label--static">Party Size</label>
+          <select id="guests" name="guests">
+            <option value="1">1 Guest</option>
+            <option value="2">2 Guests</option>
+            <option value="3">3 Guests</option>
+            <option value="4">4 Guests</option>
+          </select>
+        </div>
+        <div class="field">
+          <textarea id="message" name="message" rows="3" placeholder=" "></textarea>
+          <label for="message">A Note to the Couple (optional)</label>
+        </div>
+        <button type="submit" class="btn btn--gold">Send Response</button>
+        <p class="rsvp__thanks" id="rsvpThanks" hidden>Thank you — your response has been received with love. ✦</p>
+      </form>
+    </section>
+
+    <!-- GUEST WISHES -->
+    <section class="wishes" id="wishes">
+      <p class="section__eyebrow">The Guestbook</p>
+      <h2 class="section__title">Wishes for the Couple</h2>
+      <form class="wishes__form" id="wishForm">
+        <input type="text" id="wishName" placeholder="Your name" required />
+        <input type="text" id="wishText" placeholder="Leave a heartfelt wish…" required />
+        <button type="submit" class="btn btn--gold btn--sm">Post</button>
+      </form>
+      <div class="wishes__wall" id="wishWall"></div>
+    </section>
+
+    <!-- REGISTRY -->
+    <section class="registry" id="registry">
+      <p class="section__eyebrow">With Gratitude</p>
+      <h2 class="section__title">Your Presence &amp; Presents</h2>
+      <p class="registry__text">Your company is the greatest gift of all. Should you wish to honour us further, we have curated a registry and a contribution toward our honeymoon in the Maldives.</p>
+      <div class="registry__links">
+        <a class="btn btn--ghost" href="#" target="_blank" rel="noopener">Gift Registry</a>
+        <a class="btn btn--ghost" href="#" target="_blank" rel="noopener">Honeymoon Fund</a>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer__mono">A&nbsp;&amp;&nbsp;V</div>
+      <p class="footer__names">Alessandro &amp; Valentina</p>
+      <p class="footer__date">12 · 09 · 2026 — Lake Como, Italy</p>
+      <p class="footer__love">Made with love, for the ones we love.</p>
+    </footer>
+  </main>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox__close" id="lbClose" aria-label="Close">&times;</button>
+    <button class="lightbox__nav lightbox__nav--prev" id="lbPrev" aria-label="Previous">&#8249;</button>
+    <img class="lightbox__img" id="lbImg" alt="" />
+    <button class="lightbox__nav lightbox__nav--next" id="lbNext" aria-label="Next">&#8250;</button>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
